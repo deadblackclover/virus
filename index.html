@@ -5,165 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Virus</title>
-    <style>
-        html, body {
-            width: 100%;
-            height: 100%;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-            background-image: url('back.jpg');
-            background-position: center;
-            background-size: cover;
-        }
-        .window {
-            background: linear-gradient(to top, #F6F6F6, #E6E6E6);
-            width: 420px;
-            height: 200px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: #E0E0E0 black black black;
-            position: relative;
-        }
-
-        .top {
-            margin: 20px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .btn {
-            background-color: #E6E6E6;
-        }
-
-        .selects {
-            margin-top: -10px;
-        }
-
-        .select{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: 150px;
-            margin: 5px 0;
-            border-width: 3px;
-            border-style: solid;
-            border-color: #EEEEEE #666666 #666666 #EEEEEE;
-            font-size: 12px;
-        }
-
-        .arrows {
-            border-width: 3px;
-            border-style: solid;
-            border-color: #E0E0E0 #E0E0E0 #333333 #333333;
-        }
-
-        .launching {
-            animation: virus 0.5s cubic-bezier(.68,-0.55,.27,1.55) infinite;
-            background-color: red;
-            color: white;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            text-align: center;
-            font-size: 40px;
-        }
-
-        @keyframes virus {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        .panel {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            font-size: 10px;
-            width: 428px;
-            border: 1px solid black;
-            background: repeating-linear-gradient(0deg, #fff, #fff 1px, #333333 1px, #333333 2px) fixed;
-        }
-
-        .panel-name {
-            background-color: white;
-            width: 94px;
-            text-align: center;
-            padding: 0 2px;
-        }
-
-        .anim {
-            animation: sel 0.5s cubic-bezier(.68,-0.55,.27,1.55) infinite;
-        }
-
-        @keyframes sel {
-            0% { 
-                border-color: #EEEEEE #666666 #666666 #EEEEEE;
-                background-color: #E6E6E6;
-                color: black;
-            }
-            100% {
-                border-color: black #EEEEEE #EEEEEE black;
-                background-color: black;
-                color: white;
-            }
-        }
-
-        .anim2 {
-            animation: arw 0.5s cubic-bezier(.68,-0.55,.27,1.55) infinite;
-        }
-
-        @keyframes arw {
-            0% { 
-                border-color: #E0E0E0 #E0E0E0 #333333 #333333;
-                background-color: #E6E6E6;
-                color: black;
-            }
-            100% {
-                border-color: black black #E0E0E0 #E0E0E0;
-                background-color: black;
-                color: white;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="panel">
-        <div class="panel-name">Virus Launch Panel</div>
+        <div class="panel__name">Virus Launch Panel</div>
     </div>
     <div class="window">
-        <div class="top">
+        <div class="window__top">
             <div class="gif"><img src="pacman_l.gif"></div>
-            <div class="selects">
-                <div class="btn select anim">
-                    <div class="btn arrows anim2">&#8656;</div>
+            <div class="select">
+                <div class="select__item btn">
+                    <div class="select__arrows btn">&#8656;</div>
                     LAUNCH
-                    <div class="btn arrows anim2">&#8658;</div>
+                    <div class="select__arrows btn">&#8658;</div>
                 </div>
-                <div class="btn select">
-                    <div class="btn arrows">&#8656;</div>
+                <div class="select__item btn">
+                    <div class="select__arrows btn">&#8656;</div>
                     INFECT
-                    <div class="btn arrows">&#8658;</div>
+                    <div class="select__arrows btn">&#8658;</div>
                 </div>
-                <div class="btn select">
-                    <div class="btn arrows">&#8656;</div>
+                <div class="select__item btn">
+                    <div class="select__arrows btn">&#8656;</div>
                     GROW
-                    <div class="btn arrows">&#8658;</div>
+                    <div class="select__arrows btn">&#8658;</div>
                 </div>
             </div>
             <div class="gif"><img src="pacman_r.gif"></div>
         </div>
-        <div class="launching">LAUNCHING VIRUS</div>
+        <div class="window__bottom">LAUNCHING VIRUS</div>
     </div>
 </body>
 </html>
