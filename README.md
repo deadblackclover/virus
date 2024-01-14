@@ -1,3 +1,3 @@
-# virus-launch-panel
+# virus
 
 CSS Art
